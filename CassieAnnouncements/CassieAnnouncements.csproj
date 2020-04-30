@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E20FE910-11B3-4594-A6CF-9854C5F97FAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CassieAnnouncements</RootNamespace>
+    <AssemblyName>CassieAnnouncements</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <ReleaseVersion>1.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="EXILED">
+      <HintPath>..\..\..\..\..\HomeSSH\mnt\Storage01\Storage01\Projects\EXILED Plugins\EXILED\EXILED.dll</HintPath>
+    </Reference>
+    <Reference Include="EXILED_Events">
+      <HintPath>..\..\..\..\..\HomeSSH\mnt\Storage01\Storage01\Projects\EXILED Plugins\EXILED\EXILED_Events.dll</HintPath>
+    </Reference>
+    <Reference Include="EXILED_Idler">
+      <HintPath>..\..\..\..\..\HomeSSH\mnt\Storage01\Storage01\Projects\EXILED Plugins\EXILED\EXILED_Idler.dll</HintPath>
+    </Reference>
+    <Reference Include="EXILED_Permissions">
+      <HintPath>..\..\..\..\..\HomeSSH\mnt\Storage01\Storage01\Projects\EXILED Plugins\EXILED\EXILED_Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\HomeSSH\mnt\Storage01\Storage01\Projects\EXILED Plugins\EXILED\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\..\..\..\..\media\sean\Data01\SteamLibrary\steamapps\common\SCP Secret Laboratory Dedicated Server\SCPSL_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EventHandlers.cs" />
+    <Compile Include="UpdateCheck.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
