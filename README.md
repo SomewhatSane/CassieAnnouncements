@@ -27,4 +27,4 @@ Config `ca_announcement10` -> CassieAnnouncement 10 - Default: A<br>
 <br>
 Config `ca_checkforupdates` -> Check for CassieAnnouncements updates at plugin load - Default: True<br>
 <br>
-Made for Existinal Crisis on Discord.<br>
+Made for Existential Crisis on Discord.<br>
